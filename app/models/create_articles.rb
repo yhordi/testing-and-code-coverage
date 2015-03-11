@@ -1,2 +1,2 @@
-class CreateArticles < ActiveRecord::Base
+class Articles < ActiveRecord::Base
 end
