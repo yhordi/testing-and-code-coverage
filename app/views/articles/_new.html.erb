@@ -1,0 +1,8 @@
+<h4>Write a new article:</h4>
+<%= form_for @article do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :body %>
+  <%= f.text_area :body, :cols => "60", :rows => "10" %>
+  <%= f.submit %>
+<% end %>

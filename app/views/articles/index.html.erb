@@ -1,6 +1,6 @@
-<h1>Fancy Stuff.</h1>
-<p>New Article</p>
+<h1>Werlds Best Blogg.</h1>
+<%= render 'articles/new' %>
 <% @articles.each do |article| %>
-<h3><%= article.title%></h3>
+<h3><%= article.title %></h3>
 <p><%= article.body %></p>
 <% end %>
