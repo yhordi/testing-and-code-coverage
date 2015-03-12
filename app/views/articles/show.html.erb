@@ -5,3 +5,4 @@
   <%= f.text_area :body, :cols => "60", :rows => "10" %>
   <%= f.submit "Update", action: "update" %>
 <% end %>
+<%= button_to("Delete Article", @article, method: :delete) %>

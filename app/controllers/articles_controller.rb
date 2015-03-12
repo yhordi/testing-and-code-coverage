@@ -17,7 +17,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    ap params
     @article = Article.find(params[:id])
   end
 
@@ -28,6 +27,10 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    ap params
+    article = Article.find(params[:id])
+    article.destroy
+    redirect_to root_path
   end
 
 private
