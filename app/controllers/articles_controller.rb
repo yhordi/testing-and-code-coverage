@@ -16,6 +16,14 @@ class ArticlesController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    ap params
+    @article = Article.find(params[:id])
+  end
+
+  def destroy
+  end
+
 private
 
 def article_params
