@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'spring',        group: :development
 gem 'faker'
+gem 'awesome_print'
 group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
