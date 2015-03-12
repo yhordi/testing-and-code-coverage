@@ -9,6 +9,17 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    article = Article.new
+    article.title = params[:title]
+    article.body = params[:body]
+    article.save!
+    redirect_to root_path
   end
+
+private
+
+def article_params
+  params.require(:article).permit(:title, :body)
+end
 
 end
