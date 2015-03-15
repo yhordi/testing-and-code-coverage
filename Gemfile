@@ -15,6 +15,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'capybara'
   gem 'selenium-webdriver'
 end
