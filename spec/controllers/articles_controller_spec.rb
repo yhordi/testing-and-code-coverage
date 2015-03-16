@@ -23,6 +23,10 @@ describe ArticlesController do
       expect{
       post :create, :article => attributes}.to change{ Article.count}.by(1)
     end
+    it "redirects to the root path" do
+      post :create, :article => attributes
+      expect(response.status).to eq(302)
+    end 
   end
 
 end

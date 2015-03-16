@@ -5,9 +5,6 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def new
-  end
-
   def create
     article = Article.new
     article.title = params["article"][:title]
