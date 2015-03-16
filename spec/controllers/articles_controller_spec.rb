@@ -13,7 +13,7 @@ describe ArticlesController do
     it "assigns the articles instance variable" do
       expect(assigns(:articles)).to be_a(ActiveRecord::Relation)
     end
-    it "assigns the articles instance variable" do
+    it "assigns the article instance variable" do
       expect(assigns(:article)).to be_a(Article)
     end
   end
@@ -27,6 +27,14 @@ describe ArticlesController do
       post :create, :article => attributes
       expect(response.status).to eq(302)
     end 
+  end
+  describe 'GET #show' do
+    before(:each) do
+      get :show, id: article.id
+    end
+    it "assigns the article instance variable" do
+      expect(assigns(:article)).to be_a(Article)
+    end
   end
 
 end
