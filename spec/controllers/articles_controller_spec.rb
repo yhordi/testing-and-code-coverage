@@ -11,9 +11,13 @@ describe ArticlesController do
     it "assigns the articles instance variable" do
       expect(assigns(:articles)).to be_a(ActiveRecord::Relation)
     end
+    it "assigns the articles instance variable" do
+      expect(assigns(:article)).to be_a(Article)
+    end
   end
 
   describe '#create' do
+    
   end
 
 end
