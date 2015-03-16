@@ -8,6 +8,12 @@ describe ArticlesController do
     it "responds with a 200" do
       expect(response.status).to eq(200)
     end
+    it "assigns the articles instance variable" do
+      expect(assigns(:articles)).to be_a(ActiveRecord::Relation)
+    end
+  end
+
+  describe '#create' do
   end
 
 end
