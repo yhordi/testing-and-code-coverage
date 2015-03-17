@@ -14,6 +14,7 @@ gem 'awesome_print'
 group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'nyan-cat-formatter'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
