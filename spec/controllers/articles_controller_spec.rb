@@ -36,5 +36,12 @@ describe ArticlesController do
       expect(assigns(:article)).to be_a(Article)
     end
   end
+  describe 'PUT #update' do
+    let!(:title) { "A treatise on Malomars." }
+    it 'updates a field on an article' do
+      put :update, id: article.id, article: { title: title, body: article.body }
+      expect(article.reload.title).to eq(article.title)
+    end
+  end
 
 end
