@@ -1,28 +1,41 @@
-== README
+# Rspec and testing resources
+---
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[relish rspec guides](https://www.relishapp.com/rspec/ "relish rspec guides")
 
-Things you may want to cover:
+[rspec matchers](http://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
 
-* Ruby version
+[everyday rails testing witgh rspec book](http://everydayrails.com/)
 
-* System dependencies
+[simplecov gem for test coverage]('https://github.com/colszowka/simplecov')
+(you can also use rake stats)
 
-* Configuration
+[Nyan Cat Formatter!]('https://github.com/mattsears/nyan-cat-formatter')
 
-* Database creation
+## Database cleaner configuration for Capybara example
 
-* Database initialization
+In your rails_helper.rb file you'll want to change the follwing in the Rspec.config block
 
-* How to run the test suite
+    config.use_transactional_fixtures = true
 
-* Services (job queues, cache servers, search engines, etc.)
+to
+  
+  config.use_transactional_fixtures = false
 
-* Deployment instructions
+and then below, paste the following code:
 
-* ...
+    config.before(:suite) do
+      DatabaseCleaner.clean_with(:truncation)
+    end
 
+    config.before(:each, :js => true) do
+      DatabaseCleaner.strategy = :truncation
+    end
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+    config.before(:each) do
+      DatabaseCleaner.start
+    end
+
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
