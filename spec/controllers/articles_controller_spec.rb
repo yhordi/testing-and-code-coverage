@@ -43,5 +43,16 @@ describe ArticlesController do
       expect(article.reload.title).to eq(article.title)
     end
   end
+  describe 'DELETE #destroy' do
+    it 'decrements articles by one' do
+      article_id = article.id
+      expect {
+        delete :destroy, id: article_id
+      }.to change{ Article.count }.by(-1)
+    end
+    xit 'redirects to the root path' do
+
+    end
+  end
 
 end
