@@ -16,13 +16,19 @@ describe "Article", :js => true do
         expect(page).to have_content(article.body)
     end
   end
-  context "Update Button" do
-    it "updates an existing post" do
-      new_title = "Howby Bowby"
+  describe "article page" do
+    before(:each) do
       visit article_path(article.id)
+    end
+    it "displays a form and updates an existing post" do
+      new_title = "Howby Bowby"
       fill_in('Title', with: new_title)
       click_on('Update')
       expect(page).to have_content(new_title)
+    end
+    it "has a button that deletes the article" do
+      click_on('Delete Article')
+      expect(page).to_not have_content(article.title)
     end
   end
 end
