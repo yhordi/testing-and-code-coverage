@@ -50,8 +50,10 @@ describe ArticlesController do
         delete :destroy, id: article_id
       }.to change{ Article.count }.by(-1)
     end
-    xit 'redirects to the root path' do
-
+    it 'redirects to the root path' do
+      article_id = article.id
+      delete :destroy, id: article_id
+      expect(response.status).to eq(302)
     end
   end
 
