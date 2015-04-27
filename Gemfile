@@ -19,4 +19,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end

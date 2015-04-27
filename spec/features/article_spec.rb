@@ -1,5 +1,9 @@
   require 'rails_helper'
 
+  Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
 describe "Article", :js => true do
   let!(:article) { FactoryGirl.create :article }
 
