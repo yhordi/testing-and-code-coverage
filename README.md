@@ -20,7 +20,7 @@ In your rails_helper.rb file you'll want to change the follwing in the Rspec.con
 
 to
   
-  config.use_transactional_fixtures = false
+     config.use_transactional_fixtures = false
 
 and then below, paste the following code:
 
