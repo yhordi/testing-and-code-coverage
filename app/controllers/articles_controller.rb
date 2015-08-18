@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
 
   def update
     article = Article.find(params[:id])
+    p article
     article.update_attributes(article_params)
     redirect_to root_path
   end

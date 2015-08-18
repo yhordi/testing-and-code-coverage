@@ -13,8 +13,10 @@ gem 'faker'
 gem 'awesome_print'
 group :test do
   gem 'factory_girl_rails'
+  gem 'simplecov', :require => false
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'selenium-webdriver'
+  gem "nyan-cat-formatter"
+  gem 'selenium-webdriver', '2.45.0'
 end
