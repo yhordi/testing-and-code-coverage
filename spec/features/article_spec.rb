@@ -1,17 +1,16 @@
-describe 'Article', js: true do
+describe Article, js: true do
   context 'a guest user' do
-    describe 'on the index page' do
-      it 'can see the title' do
-        visit root_path
-        expect(page).to have_content('Werlds Best Blogg.')
-      end
-      it 'can fill out a form and see an article created on the page' do
-        visit root_path
-        fill_in 'Title', with: 'Hey Phil'
-        fill_in 'Body', with: 'Hackathon'
-        click_on 'Create Article'
-        expect(page).to have_content('Hey Phil')
-      end
+    before(:each) do
+      visit root_path
+    end
+    it 'can fill out a form to create a new article and see the article on the page' do
+      fill_in 'Title', with: 'Hi Cicadas!'
+      fill_in 'Body', with: "I don't have a million dollars. Sorry."
+      click_on 'Create Article'
+      expect(page).to have_content('Hi Cicadas!')
+    end
+    it 'can see the application title' do
+      expect(page).to have_content('Werlds Best Blogg.')
     end
   end
 end

@@ -9,11 +9,11 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    article = Article.new
-    article.title = params["article"][:title]
-    article.body = params["article"][:body]
-    article.save!
-    redirect_to root_path
+    @article = Article.new
+    @article.title = params["article"][:title]
+    @article.body = params["article"][:body]
+    @article.save!
+    render json: @article
   end
 
   def show
@@ -22,13 +22,11 @@ class ArticlesController < ApplicationController
 
   def update
     article = Article.find(params[:id])
-    p article
     article.update_attributes(article_params)
     redirect_to root_path
   end
 
   def destroy
-    ap params
     article = Article.find(params[:id])
     article.destroy
     redirect_to root_path

@@ -1,5 +1,5 @@
 <h4>Write a new article:</h4>
-<%= form_for @article do |f| %>
+<%= form_for @article, html: { id: 'create' } do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :body %>

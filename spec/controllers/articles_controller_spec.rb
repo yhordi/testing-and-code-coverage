@@ -15,10 +15,6 @@ describe ArticlesController do
     end
   end
   describe 'PUT #update' do
-    it 'updates an article in the database' do
-      bod = "hello everyone"
-      put :update, id: artie.id, article: { body: bod, title: artie.title }
-      expect(artie.reload.body).to eq(bod)
-    end
+
   end
 end
