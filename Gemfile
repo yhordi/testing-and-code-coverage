@@ -12,11 +12,8 @@ gem 'spring',        group: :development
 gem 'faker'
 gem 'awesome_print'
 group :test do
-  gem 'nyan-cat-formatter'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'capybara'
-  gem 'selenium-webdriver'
 end
