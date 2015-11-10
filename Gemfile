@@ -14,5 +14,5 @@ group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'rspec-rails'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 2.5'
 end
