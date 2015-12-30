@@ -11,8 +11,9 @@ gem 'spring',        group: :development
 gem 'faker'
 gem 'awesome_print'
 group :test do
+  gem 'simplecov', require: false
   gem 'factory_girl_rails'
-  gem 'database_cleaner'
+  # gem 'database_cleaner'
   gem 'rspec-rails'
-  gem 'shoulda-matchers', '~> 2.5'
+  # gem 'shoulda-matchers', '~> 2.5'
 end
