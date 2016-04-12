@@ -28,7 +28,7 @@ describe ArticlesController do
     end
   end
   describe '#update' do
-    let(:params) {{"article"=>{"title"=>blog.title, "body"=>":("}, "id"=>blog.id}}
+    let(:params) {{"article"=>{"title"=>blog.title, "body"=>":("}}, "id"=>blog.id}
     context 'on valid params' do
       it 'responds with a status of 302' do
         patch :update, params
