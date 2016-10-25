@@ -9,10 +9,10 @@
 
 [better specs](http://betterspecs.org/)
 
-[simplecov gem for test coverage]('https://github.com/colszowka/simplecov')
+[simplecov gem for test coverage](https://github.com/colszowka/simplecov)
 (you can also use rake stats)
 
-[Nyan Cat Formatter!]('https://github.com/mattsears/nyan-cat-formatter')
+
 
 ## Database cleaner configuration for Capybara example
 
