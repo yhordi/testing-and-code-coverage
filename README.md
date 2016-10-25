@@ -7,6 +7,8 @@
 
 [everyday rails testing witgh rspec book](http://everydayrails.com/)
 
+[better specs](http://betterspecs.org/)
+
 [simplecov gem for test coverage]('https://github.com/colszowka/simplecov')
 (you can also use rake stats)
 
